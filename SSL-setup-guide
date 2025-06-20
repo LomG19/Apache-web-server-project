@@ -1,0 +1,2 @@
+This file is a complete guide to setting up an SSL/TLS certificate to secure the website.
+The certificate issuer used is mkcert, chosen because it's free to use and open-source. Ideal for a home lab training.
