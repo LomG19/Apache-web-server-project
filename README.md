@@ -17,4 +17,4 @@ SSL/TLS configuration using `mkcert`, and domain mapping with `/etc/hosts`.
 - Redirect HTTP to HTTPS
 
 ## Project Structure
-See `setup-guide.md` for full instructions and `ssl-setup.md` for certificate details.
+See [SSL Setup Guide](ssl-setup-guide.md) for full instructions.
