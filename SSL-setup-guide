@@ -1,2 +1,15 @@
 This file is a complete guide to setting up an SSL/TLS certificate to secure the website.
 The certificate issuer used is mkcert, chosen because it's free to use and open-source. Ideal for a home lab training.
+
+Step 1: Install mkcert
+### 🔹 R1 OSPF
+```bash
+router ospf 1
+ network 10.0.12.0 0.0.0.3 area 0
+ network 10.0.13.0 0.0.0.3 area 0
+ network 1.1.1.1 0.0.0.0 area 0
+ network 203.0.113.1 0.0.0.3 area 0
+ passive-interface l0
+ passive-interface s1/0
+ default-information originate
+```
