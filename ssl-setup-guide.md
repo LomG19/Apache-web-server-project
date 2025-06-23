@@ -43,7 +43,7 @@ mkcert -install
 - student_reg is a custom domain added to /etc/hosts/
 
 ```bash
-mkcert student_reg.local <- This will create two files as shown below in the image
+mkcert student_reg.local <- This will create two files, as shown below in the image
 ```
 
 ![Certificate files.png](SSL%20Setup%20Guide%20with%20mkcert%2021bc5a6a6b21808294beec58e45ceb47/Certificate_files.png)
@@ -58,7 +58,7 @@ mkcert student_reg.local <- This will create two files as shown below in the ima
 ```bash
 ** Host Creation **
 sudo nano /etc/apache2/sites-available/student_reg-ssl.conf/
-								** Configurations **
+** Configurations **
 								<VirtualHost *:443>
 										    ServerName student_reg.local
 										    DocumentRoot /var/www/html/student_reg
