@@ -114,6 +114,6 @@ sudo systemctl reload apache2
 
 - When the website is visited, it will now have a padlock in front of the URL. Images below can show before the SSL certificate and after.
 
-![Certificate files](Images/insecure-website.png)
+![No certificate](Images/insecure-website.png)
 
-![Certificate files](Images/Secure-website.png)
+![With Certificate](Images/secure-website.png)
