@@ -49,7 +49,8 @@ mkcert student_reg.local <- This will create two files as shown below in the ima
 - student_reg.local-key.pem → Private key
 - student_reg.local.pem → Certificate
 
-![Certificate files.png](SSL%20Setup%20Guide%20with%20mkcert%2021bc5a6a6b21808294beec58e45ceb47/Certificate_files.png)
+![Certificate files](images/certificate-files.png)
+
 
 ## Step 4: Configure Apache to use the SSL certificate
 
