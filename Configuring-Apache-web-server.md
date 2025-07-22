@@ -16,25 +16,7 @@ sudo apt install apache2 mysql-server
 sudo apt install php php-cli php-mysql libapache2-mod-php -y
 ```
 
-## Step 2: Create the database
-
-- I created a DB called student_db and table called STUDENTS :
-
-```bash
-sudo mysql
-```
-
-```sql
-CREATE DATABASE student_db;
-USE student_db;
-CREATE TABLE STUDENTS(
-ID INT PRIMARY KEY AUTO_INCREMENT,
-NAME VARCHAR(50) NOT NULL,
-DEPARTMENT VARCHAR(50) NOT NULL,
-PHONE INT NOT NULL);
-```
-
-## Step 3: Create the root directory
+## Step 2: Create the root directory
 
 - This directory, named student_reg, will hold the website files
 
@@ -42,7 +24,7 @@ PHONE INT NOT NULL);
 sudo mkdir -p /var/www/html/student_reg
 ```
 
-## Step 4: Set permissions for the web directory
+## Step 3: Set permissions for the web directory
 
 To make sure Apache can read and serve the website files.
 
@@ -51,7 +33,7 @@ sudo chown -R $USER:www-data /var/www/html/student_reg
 sudo chmod -R 755 /var/www/html/student_reg
 ```
 
-## Step 5: Add website files
+## Step 4: Add website files
 
 Place the website files, such as index.php, style.css, and other necessary files, inside:
 
@@ -59,7 +41,7 @@ Place the website files, such as index.php, style.css, and other necessary files
 /var/www/html/student_reg/
 ```
 
-## Step 6: Create an Apache Virtual Host
+## Step 5: Create an Apache Virtual Host
 
 Each virtual host is like a separate "website" configuration inside the server. It tells Apache how to handle HTTP and HTTPS requests for a specific domain.
 
@@ -67,7 +49,7 @@ Each virtual host is like a separate "website" configuration inside the server. 
 sudo nano /etc/apache2/sites-available/student_reg.conf
 ```
 
-## Step 7: Enable the site and reload Apache
+## Step 6: Enable the site and reload Apache
 
 ```bash
 sudo a2ensite student_reg.conf
@@ -75,7 +57,7 @@ sudo systemctl reload apache2
 
 ```
 
-## Step 8: Map the domain locally
+## Step 7: Map the domain locally
 
 Inside the `/etc/hosts` Add the following line to resolve `student_reg.local`
 
@@ -83,3 +65,4 @@ Inside the `/etc/hosts` Add the following line to resolve `student_reg.local`
 127.0.0.1 student_reg.local
 
 ```
+Apache is now configured to serve a website using a virtual host, and the website "student_reg.local" is accessible locally.
